@@ -1,0 +1,187 @@
+/* /////////////////////////////Typography///////////////////////////// */
+:root {
+  --font-sans: /* font-sans */
+    Roboto,           /* 3. Android */
+    system-ui,        /* 1. Estándar moderno (W10, macOS) */
+    -apple-system,    /* 2. macOS 10.11-10.12 */
+    "Segoe UI",       /* 4. Windows moderno/antiguo */
+    "Helvetica Neue", /* 5. macOS muy antiguo */
+    Arial;            /* 6. Universal (Fallback) */
+
+  --font-monospace: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --fs-16xl: 9.2rem;  /* 90px */
+  --fs-15xl: 8.6rem;  /* 86px */
+  --fs-14xl: 8.2rem;  /* 82px */
+  --fs-13xl: 7.8rem;  /* 78px */
+  --fs-12xl: 7.4rem;  /* 74px */
+  --fs-11xl: 7.0rem;  /* 70px */
+  --fs-10xl: 6.6rem;  /* 66px */
+  --fs-9xl: 6.2rem;  /* 62px */
+  --fs-8xl: 5.8rem;  /* 58px */
+  --fs-7xl: 5.4rem;  /* 54px */
+  --fs-6xl: 5.0rem;  /* 50px */
+  --fs-5xl: 4.6rem;  /* 46px */
+  --fs-4xl: 4.2rem;  /* 42px */
+  --fs-3xl: 3.8rem;  /* 38px */
+  --fs-2xl: 3.4rem;  /* 34px */
+  --fs-xxl: 3.0rem;  /* 30px */
+  --fs-xl:  2.6rem;  /* 24px */
+  --fs-lg:  2.2rem;  /* 20px */
+  --fs-md:  1.8rem;  /* 18px */
+  --fs-base: 1.6rem; /* 16px */
+  --fs-sm:  1.4rem;  /* 14px */
+  --fs-xs:  1.2rem;  /* 12px */
+}
+
+html{
+  font-family: var(--font-sans);
+  font-size: 62.5%;              /* 1rem = 10px */
+  line-height: 1.5;              /* Corrije la altura de la línea de texto. */
+}
+
+body {
+  font-size: var(--fs-base); /* font size 16px */
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: .8rem;
+  text-wrap: balance; /* Evita palabras huérfanas en títulos */
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1, h2, h3 { letter-spacing: -0.02rem; }
+
+h1 { font-size: clamp(var(--fs-xl), 5vw, var(--fs-3xl)); }
+
+h2 { font-size: clamp(var(--fs-lg), 4vw, var(--fs-xxl)); }
+
+h3 { font-size: clamp(var(--fs-md), 3.2vw, var(--fs-lg)); }
+
+p, pre, dl, ol, ul, figure { margin: 0 0 1.6rem; }
+
+a:hover { text-decoration: underline; }
+
+a { text-decoration: none }
+
+ol, ul { padding-left: 2.5rem; }
+
+dd { margin-left: 3.2rem; }
+
+dt { font-weight: 700; }
+
+caption { padding: .8rem 0; }
+
+code, kbd, pre, samp {
+  font-family: var(--font-monospace);
+  font-size: .875em;
+}
+
+kbd {
+  padding: min(.2em, .35rem) min(.45em, 2rem);
+  border-radius: min(.3em, 1rem);
+}
+
+kbd > kbd { padding: 0; }
+
+mark { padding: .3rem .375rem; }
+
+blockquote { font-size: 2rem; }
+
+@media(max-width: 768px) {
+  html {
+    font-size: 56.25%; 
+  }
+}
+
+/* Clases con Tamaño de Texto Personalizado */
+
+.fs_5xl,.fs_6xl,.fs_7xl,.fs_8xl,.fs_9xl,.fs_10xl,
+.fs_11xl,.fs_12xl,.fs_13xl,.fs_14xl,.fs_15xl,.fs_16xl {
+  line-height: 1.2;
+}
+
+.fs_16xl { font-size: var(--fs-16xl); /* 90px */ }
+
+.fs_15xl { font-size: var(--fs-15xl); /* 86px */ }
+
+.fs_14xl { font-size: var(--fs-14xl); /* 82px */ }
+
+.fs_13xl { font-size: var(--fs-13xl); /* 78px */ }
+
+.fs_12xl { font-size: var(--fs-12xl); /* 74px */ }
+
+.fs_11xl { font-size: var(--fs-11xl); /* 70px */ }
+
+.fs_10xl { font-size: var(--fs-10xl); /* 66px */ }
+
+.fs_9xl { font-size: var(--fs-9xl); /* 62px */ }
+
+.fs_8xl { font-size: var(--fs-8xl); /* 58px */ }
+
+.fs_7xl { font-size: var(--fs-7xl); /* 54px */ }
+
+.fs_6xl { font-size: var(--fs-6xl); /* 50px */ }
+
+.fs_5xl { font-size: var(--fs-5xl); /* 46px */ }
+
+.fs_4xl {
+  font-size: var(--fs-4xl); /* 42px */
+  line-height: 1.23;
+}
+
+.fs_3xl {
+  font-size: var(--fs-3xl); /* 38px */
+  line-height: 1.25;
+}
+
+.fs_2xl {
+  font-size: var(--fs-2xl); /* 34px */
+  line-height: 1.28;
+}
+
+.fs_xxl {
+  font-size: var(--fs-xxl); /* 30px */
+  line-height: 1.3;
+}
+
+.fs_xl {
+  font-size: var(--fs-xl); /* 26px */
+  line-height: 1.35;
+}
+
+.fs_lg {
+  font-size: var(--fs-lg); /* 22px */
+  line-height: 1.35;
+}
+
+.fs_md {
+  font-size: var(--fs-md); /* 18px */
+  line-height: 1.4;
+}
+
+.fs_sm { font-size: var(--fs-sm); /* 14px */ }
+
+.fs_xs { font-size: var(--fs-xs); /* 12px */ }
+
+
+/* Clases de Utilidad */
+
+/* Trunca a una sola línea con puntos suspensivos */
+.truncate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+/* Trunca a N líneas (default 2) */
+.text_limit{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--lines, 2);
+}
+

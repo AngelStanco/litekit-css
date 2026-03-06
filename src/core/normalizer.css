@@ -1,0 +1,210 @@
+/*/////////////////////////////Otter_Css_Normalizer/////////////////////////////*/
+@charset "UTF-8"; /* Fuerza al navegador a leer el archivo css usando el estándar UTF-8 */
+
+*, *::before, *::after {
+  background-repeat: no-repeat; /* Evita repeticiones de imagen innecesarias */
+  box-sizing: border-box;       /* Padding y el border se restan del interior. */
+}
+
+::before, ::after { /* Hereda decoraciones en pseudo-elementos */
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html{
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; /* Quita el flash gris al tocar en táctil */
+  -webkit-text-size-adjust: none;           /* Bloquea el auto-zoom de texto en móviles al rotar */
+  text-rendering: optimizeSpeed;            /* Prioriza Optimizacion sobre ligaduras tipográficas */
+  scroll-behavior: smooth;                  /* Anima suavemente la posición de desplazamiento */
+  word-break: break-word;                   /* Divide palabras para evitar el desbordamiento en todos los navegadores */
+  tab-size: 4;                              /* Personaliza el ancho de los caracteres de tabulación a 4 */
+}
+
+body {
+  -webkit-font-smoothing: antialiased; /* Suavizado de subpíxeles a antialiasing de escala de grises. */
+  -moz-osx-font-smoothing: grayscale;  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^Firefox^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+  overscroll-behavior-y: none;         /* Evita recarga accidental al deslizar hacia abajo */
+  overflow-x: hidden;                  /* Evita scrolls laterales accidentales */
+  min-height: 100vh;
+  min-height: 100dvh;                  /* Altura real en móviles con barras dinámicas */
+  margin: 0;
+}
+
+nav ol, nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle; /* Las imágenes encajan perfectamente en sus bordes. */
+}
+
+canvas, img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+svg:not([fill]) { /* Permite colorear iconos con 'color' de CSS */
+  fill: currentColor;
+}
+
+svg { /* Previene desbordamiento en IEs antiguos y Chrome Legacy */
+  overflow: hidden;
+}
+
+hr{
+  height: 0;
+  border: 0;
+  opacity: .3;
+  margin: 1.6rem 0;
+  border-top: 1px solid;
+}
+
+table {
+  border-collapse: collapse; /* Evita que las tablas se salgan de su contenedor */
+  border-color: inherit;
+  caption-side: bottom;
+  max-width: 100%;
+  text-indent: 0;
+  width: 100%;
+}
+
+abbr[title] {
+  text-decoration: underline dotted; /* Estilo estándar para abreviaturas */
+  cursor: help;
+}
+
+code, kbd, pre, samp {
+  font-variant-ligatures: none; /* Evita que los símbolos de código se junten de forma rara */
+}
+
+pre { overflow: auto; }
+
+a > code, a > pre, pre > code {
+  color: inherit;
+}
+
+sub,sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+}
+
+sub { bottom: -.25rem; }
+sup { top: -.5rem; }
+
+a, button, input, label, select, summary, textarea, [tabindex] {
+  touch-action: manipulation; /* Elimina retraso de 300ms en clics táctiles legacy */
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: 100%;
+  color: inherit;
+  margin: 0;
+}
+
+textarea {
+  resize: vertical; /* Evita que el usuario ensanche el cuadro y rompa el layout lateral */
+  overflow: auto;   /* Quita barra de scroll innecesaria en IEs/Edge antiguos */
+}
+
+button, select { /* Corrige herencia en Firefox y navegadores Legacy */
+  text-transform: none;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner { /* Quita el padding/borde interno extra de Firefox */
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring { /* Garantiza visibilidad de foco por teclado en Firefox */
+  outline: 1px dotted ButtonText;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button { /* Limpieza de inputs numéricos (Chrome/Safari) */
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield; /* Corrige apariencia en Safari/Chrome */
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+::-webkit-input-placeholder { color: inherit; opacity: 0.54; } /* Placeholders consistentes */
+
+legend {
+  white-space: normal; /* Evita que el texto largo se desborde */
+  max-width: 100%;
+  display: table; /* Fix de ancho en navegadores antiguos */
+  color: inherit;
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+iframe {
+  border: none;
+}
+
+dialog {
+  background-color: canvas;
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid;
+  color: canvastext;
+  position: fixed;
+  margin: auto;
+  padding: 1em;
+  inset: 0;
+}
+
+dialog:not([open]) {
+  display: none; /* Fallback para navegadores sin soporte nativo */
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+::-moz-ui-invalid { /* Quita la sombra roja automática de Firefox en inputs */
+  box-shadow: none;
+}
+
+[aria-busy="true"] { cursor: progress; } /* Indica carga en elementos específicos */
+[aria-disabled="true"], [disabled] { cursor: not-allowed; } /* Feedback claro de bloqueo */
+
+/* Solo desactivamos animaciones si el usuario lo pidió en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

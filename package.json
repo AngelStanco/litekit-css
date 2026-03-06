@@ -1,0 +1,15 @@
+{
+  "name": "litekit-css",
+  "version": "0.1",
+  "description": "Lightweight and modular CSS library for high-performance systems.",
+  "main": "src/main.css",
+  "scripts": {
+    "build": "lightningcss --bundle --minify --targets '>= 0.25%' src/main.css -o dist/litekit.min.css"
+  },
+  "keywords": ["css", "framework", "library", "lite", "kit"],
+  "author": "AngelStanco",
+  "license": "MIT",
+  "devDependencies": {
+    "lightningcss-cli": "^1.22.1"
+  }
+}
