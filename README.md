@@ -37,4 +37,4 @@
 
 ## **⚖️ License**
 
-Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. See the LICENSE file for details.
+Distributed under the [MIT](ssh://choosealicense.com/licenses/mit/) License. See the LICENSE file for details.
