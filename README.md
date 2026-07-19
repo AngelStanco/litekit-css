@@ -1,40 +1,69 @@
-# Litekit - CSS (Beta)
 
-**Litekit** is a lightweight, modular, high-performance CSS library designed for resource-constrained systems and applications that prioritize loading speed.
+# LiteKit ✨
 
-> **Status:** Functional Beta Version.
+> Lightweight Native Web Framework.
 
-## Main Features
+LiteKit es un framework web modular para crear sitios web, aplicaciones SPA y PWAs aprovechando al máximo las capacidades nativas del navegador.
 
-- **Intelligent Normalization:** Based on a normalizer that prioritizes rendering speed (`optimizeSpeed`).
+Su objetivo es ofrecer una experiencia moderna con el menor peso, la menor complejidad y la mayor compatibilidad posible, sin depender de herramientas de compilación ni grandes ecosistemas.
 
-- **Lightweight:** No heavy dependencies or unnecessary bloatware.
+> 🚧 **Estado:** Diseño arquitectónico (Pre-Alpha)
 
-- **HSL Color System:** Theme management using HSL variables for maximum flexibility.
+---
 
-## Project Structure
+## ✨ Características
 
-- `normalize.css`: Cleanliness and consistency across browsers.
+- ⚡ Ligero y modular.
+- 🌐 SPA sin recargar la página.
+- 📱 Soporte para Progressive Web Apps (PWA).
+- 🎨 UI minimalista y optimizada.
+- 🧩 Componentes independientes.
+- 📖 HTML, CSS y JavaScript estándar.
+- 🔍 SEO Friendly.
+- ♿ Accesible desde el inicio.
+- 🚫 Sin dependencias obligatorias.
+- 📦 Sin proceso de build.
 
-- `typography.css`: Responsive and modern typographic scale.
+---
 
-- `colors.css`: HSL-optimized color palette.
+## 📦 Módulos
 
-## Installation
+- **UI** — Componentes visuales y estilos.
+- **Router** — Navegación SPA.
+- **API** — Comunicación con servicios externos.
+- **PWA** — Offline, Service Worker y Manifest.
+- **Icons** — Biblioteca de iconos SVG.
 
-1. **Clone the repository:**
-```bash
- git clone https://github.com/AngelStanco/litekit-css.git
-```
+---
 
-2. **Import the library into your main CSS file:**
+## 🚀 Objetivos
 
- @import "src/normalizer.css";
+- Aprovechar las capacidades nativas del navegador.
+- Reducir al mínimo el uso de JavaScript.
+- Mantener una arquitectura modular.
+- Optimizar el rendimiento incluso en equipos de bajos recursos.
+- Crear aplicaciones fáciles de mantener y extender.
 
- @import "src/typography.css";
+---
 
- @import "src/colors.css";
+## 📖 Documentación
 
-## **⚖️ License**
+- [Visión general](docs/OVERVIEW.md)
+- [Filosofía](docs/PHILOSOPHY.md)
+- [Arquitectura](docs/ARCHITECTURE.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Decisiones de diseño](docs/DECISIONS.md)
 
-Distributed under the [MIT](ssh://choosealicense.com/licenses/mit/) License. See the LICENSE file for details.
+---
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas.
+
+Toda sugerencia, corrección o propuesta de mejora será revisada antes de incorporarse al proyecto.
+
+---
+
+## ⚖️ Licencia
+
+Este proyecto se distribuye bajo la licencia [MIT](ssh://choosealicense.com/licenses/mit/).
